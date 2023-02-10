@@ -77,6 +77,8 @@ td:nth-child(3) {
     color:yellow;
 }
 
+.me-auto{background-color: #010101;}
+
 .downbutt{margin: 50px auto;}
 
 @media (max-width: 789px) {
