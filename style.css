@@ -135,7 +135,7 @@ td:nth-child(3) {
     /* .icons{position: absolute;top:20px;right:15px;margin-right: 0;} */
 }
 @media (max-width: 575px) {
-    .navbar-collapse{position: absolute;top:85px;border: 1px solid white;overflow: hidden;border-radius: 5px;background-color: #010101;;}
+    .navbar-collapse{position: absolute;top:85px;border: 1px solid white;overflow: hidden;border-radius: 5px;background-color: #010101;z-index: 2;}
     .nav-item{border-bottom: 1px solid white;}
     .nav-link{color:white;}
     .nav-link:hover{color: #FE0001;}
