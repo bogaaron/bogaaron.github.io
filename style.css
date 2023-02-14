@@ -66,7 +66,7 @@ body{background-color: #010101;}
 .prog{font-size: 50px;font-weight: bold;text-align: center;color:white;margin: 0 auto;margin-top: -80px;}
 
 .contact{
-    font-weight: bold;color: white;font-size: 25px;text-align: center;margin: 100px 10px 25px 10px;
+    font-weight: bold;color: white;font-size: 25px;text-align: center;margin: 100px 10px;
 }
 .phone{color: #FE0001;}
 .con{margin: 0 auto;max-width: 65px;}
@@ -85,8 +85,6 @@ td:nth-child(3) {
     color:yellow;
 }
 
-.me-auto{background-color: #010101;}
-
 .downbutt{margin: 50px auto;}
 
 .me-auto{background-color: #010101;z-index: 2;}
@@ -95,6 +93,7 @@ td:nth-child(3) {
 .pr{display: none;}
 
 .phoned{display: none;}
+
 
 @media (max-width: 789px) {
 	.logo{width: 100px;}
@@ -146,6 +145,7 @@ td:nth-child(3) {
 
     .prog{margin-top: 0px;}
 
+
     .sec{margin: 0;}
     .iconflex{flex-direction: column;max-width: 70%;margin: 0 auto;}
     .iconandtext{margin-top: 25px;}
@@ -157,7 +157,7 @@ td:nth-child(3) {
     /* .icons{position: absolute;top:20px;right:15px;margin-right: 0;} */
 }
 @media (max-width: 575px) {
-    .navbar-collapse{position: absolute;top:85px;border: 1px solid white;overflow: hidden;border-radius: 5px;background-color: #010101;z-index: 2;}
+    .navbar-collapse{position: absolute;top:85px;border: 1px solid white;overflow: hidden;border-radius: 5px;background-color: #010101;z-index: 2;;}
     .nav-item{border-bottom: 1px solid white;}
     .nav-link{color:white;}
     .nav-link:hover{color: #FE0001;}
