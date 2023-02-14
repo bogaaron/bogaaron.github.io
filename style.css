@@ -11,7 +11,15 @@ body{background-color: #010101;}
 }
 .bg-color{background-color: transparent !important;}
 
+.iconflex{display: flex;justify-content:center;position: relative;margin-top: 80px;}
 
+.sec{margin: 0 100px;}
+
+.iconandtext{overflow: hidden;display: flex;}
+
+#singleicon{filter: drop-shadow(0px -100px 0px red);max-width: 70px;transform: translateY(100px);margin-right: 10px;}
+
+.t{color: white;font-weight: bold;display: inline-block;vertical-align: middle;text-transform: uppercase;padding-top: 25px;}
 
 .logo{width: 200px;}
 
@@ -81,6 +89,13 @@ td:nth-child(3) {
 
 .downbutt{margin: 50px auto;}
 
+.me-auto{background-color: #010101;z-index: 2;}
+
+.eltunik{display: block !important;}
+.pr{display: none;}
+
+.phoned{display: none;}
+
 @media (max-width: 789px) {
 	.logo{width: 100px;}
     .navbar{padding-top: 0;height: 100px;}
@@ -130,6 +145,13 @@ td:nth-child(3) {
     .jobb{font-size: 25px;padding: 100px 0;}
 
     .prog{margin-top: 0px;}
+
+    .sec{margin: 0;}
+    .iconflex{flex-direction: column;max-width: 70%;margin: 0 auto;}
+    .iconandtext{margin-top: 25px;}
+
+    .desctopp{display: none;}
+    .phoned{display: block;}
 
     /* .navbar-toggler{order:1} */
     /* .icons{position: absolute;top:20px;right:15px;margin-right: 0;} */
