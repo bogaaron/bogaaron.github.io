@@ -213,7 +213,7 @@ td:nth-child(3) {
     .desctopp{display: none;}
     .phoned{display: block;}
 
-    .vegre{margin-left: 0px;}
+    .vegre{margin-left: 0px !important;}
 
     /* .navbar-toggler{order:1} */
     /* .icons{position: absolute;top:20px;right:15px;margin-right: 0;} */
