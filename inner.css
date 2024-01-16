@@ -1,0 +1,21 @@
+.grid2{display: flex;max-width: 1000px;margin: 0 auto;margin-bottom: 50px;}
+
+.carousel{max-width: 100%;flex: 1;}
+
+.pic button{filter: invert(55%) sepia(50%) saturate(6688%) hue-rotate(71deg) brightness(95%) contrast(95%);transform: scale(1.05);}
+
+.text{flex: 1;font-size: 18px;padding-left: 40px;display: flex;flex-direction: column;padding-top: 20px;}
+.title{font-size: 25px; font-weight: bold;color:#329A06;}
+.description{margin: 20px 0;max-width: 70%;}
+.price2{font-size: 25px; font-weight: bold;color:#329A06;}
+
+.erdekel{border: none;cursor: pointer;background-color: #329A06;color:white;font-weight: bold; text-transform: uppercase;padding: 10px 40px;display: block;border-radius: 6px;max-width: 40%;text-align: center;margin-top: auto;margin-bottom: 50px;}
+
+.same{max-width: 1000px;margin: 0 auto;margin-bottom: 50px;}
+
+.d-block{max-width: 450px;}
+
+.cuccholder{max-width: 1000px;margin: 0 auto;margin-top: 20px;padding: 0 30px;display: flex;}
+.input-group{max-width: 300px;margin-left: auto;}
+
+.input-group .btn{background-color: #329A06;border-color: white !important;}

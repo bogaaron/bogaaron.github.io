@@ -1,0 +1,14 @@
+
+.cuccholder{max-width: 1000px;margin: 0 auto;margin-top: 20px;padding: 0 30px;display: flex;}
+.input-group{max-width: 300px;margin-left: auto;}
+
+.input-group .btn{background-color: #329A06;border-color: white !important;}
+
+
+.dropdown .btn{background-color: #329A06;border-color: white !important;}
+.contact{margin-top: 50px;}
+
+.pcontainer{width: fit-content;margin: 0 auto;margin-top: 50px;}
+.pagination{margin: 0 auto;}
+
+.linkecske{color:#329A06;}

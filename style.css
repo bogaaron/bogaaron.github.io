@@ -1,42 +1,60 @@
 *{margin: 0; box-sizing: border-box;}
-body{background-color: #010101;}
 .banner{
-    background-color: #010101;
     width: 100%;
-    height: 800px;
-    background-position: center right;
+    height: 250px;
+    background-position:bottom right;
     background-repeat: no-repeat;
-    background-image:url('images/banner.jpg');
-    background-size: 85%;
+    background-image:url('images/dolt.jpg');
+    background-size: 60%;
+    margin-bottom: 100px;
 }
 .bg-color{background-color: transparent !important;}
-
-.iconflex{display: flex;justify-content:center;position: relative;margin-top: 80px;}
-
+.iconflex{display: flex;justify-content:center;position: relative;margin-top: 40px;}
 .sec{margin: 0 100px;}
+.iconandtext{cursor: pointer;box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);border-radius: 10px;padding: 20px 10px;margin: 0 10px;position: relative;}
 
-.iconandtext{overflow: hidden;display: flex;}
+.iconandtext:hover img {
+    transform: scale(0.85);
+}
 
-#singleicon{filter: drop-shadow(0px -100px 0px red);max-width: 70px;transform: translateY(100px);margin-right: 10px;}
+#singleicon{max-width: 200px;transition: transform 0.3s ease-in-out;}
 
-.t{color: white;font-weight: bold;display: inline-block;vertical-align: middle;text-transform: uppercase;padding-top: 25px;}
+.t{font-weight: bold;text-align: center;vertical-align: middle;text-transform: uppercase;padding-top: 25px;position: relative;background-color: white;z-index: 2;}
 
-.logo{width: 200px;}
+.ez::after{
+    content: "-15%";
+    background-color: red;
+    position: absolute;
+    top: 20px;
+    right: -14px;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    z-index: 2;
+    font-size: 12px;
+}
 
-.navbar{height: 170px;padding-top: 20px;margin-bottom: -200px;}
-.nav-link{font-weight: bold;color: white; text-transform: uppercase;}
-.nav-item{padding: 0 15px;}
-.bannerbutt{background-color: #FE0001;font-weight: bold;color: white; text-transform: uppercase;margin-top: 10%;padding: 10px 40px;display: block;margin-left:5%;border-radius: 2px;}
-.btn:hover {background-color: #cc190c;color: white ;}
-.tex{font-weight: bold;font-size: 50px;color: white;position: absolute;top:35%;left: 15%; text-transform: uppercase;}
+.price{color: #329A06;text-align: center;font-weight: bold;}
+.prop{border: 1px solid #329A06;text-align: center;border-radius: 10px;padding: 5px 0;max-width: 80%;margin: 10px auto 0 auto;}
+.prop:hover{color: #329A06;}
+
+.logo{width: 230px;}
+
+.navbar{height: 140px;box-shadow: 0px 1px 10px 2px rgba(0,0,0,0.5);}
+.nav-link{font-weight: bold; text-transform: uppercase;color: #323233;font-size: 12px;}
+.nav-link:hover{color: grey;}
+.nav-item{padding: 0 5px;}
+.bannerbutt{background-color: #329A06;color:white;font-weight: bold; text-transform: uppercase;margin-top:20px;padding: 10px 40px;display: block;border-radius: 6px;}
+.btn:hover {background-color: #323233;}
+.tex{font-weight: bold;font-size: 30px;color: #323233;text-transform: uppercase;max-width: 80%;margin: 0 auto;padding: 0 20px;margin-top: 50px;}
 .also{font-size: 16px;display: block;}
-.force{color:#FE0001;}
-.icons{height: 100px;color: white;display: flex;}
+.force{color:#329A06;}
+.icons{height: 100px;display: flex;margin-top: -10px;}
 .face{padding-top: 35px;}
 .insta{padding-top: 35px;padding-left: 15px;}
 .arak{
     margin-top: -300px;
-
     width: 100%;
     background-position: top left;
     background-repeat: no-repeat;
@@ -45,8 +63,8 @@ body{background-color: #010101;}
 
 }
 .container{padding:50px 100px 200px 100px;}
-.table{max-width: 45%;margin-left: auto;margin-right: 0px;background-color: transparent !important;color: white;}
-.ber{font-weight: bold;font-size: 50px;color: white;text-transform: uppercase;max-width: 250px;margin-left: auto;margin-right: 0;margin-top: 70px;}
+.table{max-width: 45%;margin-left: auto;margin-right: 0px;background-color: transparent !important;}
+.ber{font-weight: bold;font-size: 50px;text-transform: uppercase;max-width: 250px;margin-left: auto;margin-right: 0;margin-top: 70px;}
 
 .container-fluid{width: 80%;}
 
@@ -62,18 +80,31 @@ body{background-color: #010101;}
 .bal{font-size: 50px;font-weight: bold;display: flex;flex-direction: column;justify-content: center;text-align: center;padding: 200px 0 300px 0;}
 .jobb{font-size: 50px;font-weight: bold;display: flex;flex-direction: column;justify-content: center;text-align: center;padding: 200px 0 300px 0;}
 .het{color: yellow;}
-.ido{color: white;}
-.prog{font-size: 50px;font-weight: bold;text-align: center;color:white;margin: 0 auto;margin-top: -80px;}
+
+.prog{font-size: 50px;font-weight: bold;text-align: center;margin: 0 auto;margin-top: -80px;}
 
 .contact{
-    font-weight: bold;color: white;font-size: 25px;text-align: center;margin: 100px 10px;
+    font-weight: bold;font-size: 25px;display: flex;background-color: black;padding: 10px 0 0 0;
+
 }
-.phone{color: #FE0001;}
-.con{margin: 0 auto;max-width: 65px;}
+.con{margin: 0 auto;}
+.conti{flex: 1;padding: 50px 0px;font-size: 16px;color: white;font-weight: normal;display: flex;}
+.phone{margin-top: 10px;cursor: pointer;}
+.phone svg{margin-right: 10px}
+.mail{margin-top: 10px;cursor: pointer;}
+.mail svg{margin-right: 10px}
+.whatsapp{margin-top: 10px;cursor: pointer;}
+.whatsapp svg{margin-right: 10px}
+.right{display: flex;align-items: center;flex-direction: row;padding-left: 50px;}
+.logo2{margin: auto;display: block;max-width: 250px;}
+
+.conti .nav-link{color: white;}
+.eleres{text-transform: uppercase;color:#329A06;font-size: 20px;font-weight: bold;}
+.image{flex:1; background-position: right;background-repeat: no-repeat;background-image:url('images/alol1.jpg');background-size: contain;background-position: bottom 0px right 20px;}
 
 table{text-align: center;}
 
-.table-hover>tbody>tr:hover>*{color: white !important;font-weight: bold;}
+.table-hover>tbody>tr:hover>*{font-weight: bold;}
 td{vertical-align: middle;}
 
 td:nth-child(1) {
@@ -85,19 +116,25 @@ td:nth-child(3) {
     color:yellow;
 }
 
-.downbutt{margin: 50px auto;}
+.innerlink{text-decoration: none;color: #212529;}
+.innerlink:hover{text-decoration: none;color: #212529;}
 
-.me-auto{background-color: #010101;z-index: 2;}
+.downbutt{margin: 50px auto 50px auto;max-width: 300px;}
+.downbutt:hover{color: white;}
+
+.me-auto{z-index: 2;margin-top: -15px;}
 
 .eltunik{display: block !important;}
 .pr{display: none;}
 
 .phoned{display: none;}
 
+.navbar-toggler-icon{filter: invert(1);}
+
 
 @media (max-width: 789px) {
-	.logo{width: 100px;}
-    .navbar{padding-top: 0;height: 100px;}
+	.logo{width: 180px;}
+    .navbar{padding-top: 0;}
     .icons{order:3;}
     .navbar-brand{order:2;}
     .container-fluid{width: 100%;}
@@ -105,13 +142,20 @@ td:nth-child(3) {
     .banner{
         margin-top: 40px;
         width: 100%;
-        height: 800px;
-        background-position: center;
-        background-size: cover;
+        background-size: 70%;
         background-repeat: no-repeat;
-        background-image:url('images/banner.jpg');
+        margin-bottom: 50px;
+        height: auto;
     }
+    .tex{padding-bottom: 100px;}
 
+    .same .title{padding-left: 25px;}
+
+    .grid2{flex-direction: column;}
+    .d-block{max-width: 90%;margin: 0 auto;}
+    .erdekel{max-width: 90% !important;margin: 20px auto !important;}
+
+    .ez::after{right: -25px;}
     .arak{
         margin-top: -300px;
         width: 100%;
@@ -147,8 +191,23 @@ td:nth-child(3) {
 
 
     .sec{margin: 0;}
-    .iconflex{flex-direction: column;max-width: 70%;margin: 0 auto;}
+    .iconflex{margin: 0 auto;flex-wrap: wrap;}
+    .innerlink{width: 45%;}
     .iconandtext{margin-top: 25px;}
+    #singleicon{max-width: 100%;}
+    .form-control{margin-left: 20px;}
+
+    .face{padding-top: 40px;}
+    .insta{padding-top: 40px;}
+
+    .bottomlogo{margin: 0 auto;padding: 0;}
+    .right{padding: 0;margin-bottom: 20px;}
+    .contact{flex-direction: column-reverse;}
+    .image{padding-top: 200px;display: block;background-position: bottom center;margin-top: -70px}
+    .conti{flex-direction: column-reverse;justify-content: center;text-align: center;}
+    .logo2{max-width: 200px;}
+
+    .con{width: fit-content;}
 
     .desctopp{display: none;}
     .phoned{display: block;}
@@ -157,10 +216,9 @@ td:nth-child(3) {
     /* .icons{position: absolute;top:20px;right:15px;margin-right: 0;} */
 }
 @media (max-width: 575px) {
-    .navbar-collapse{position: absolute;top:85px;border: 1px solid white;overflow: hidden;border-radius: 5px;background-color: #010101;z-index: 2;;}
-    .nav-item{border-bottom: 1px solid white;}
-    .nav-link{color:white;}
-    .nav-link:hover{color: #FE0001;}
+    .navbar-collapse{position: absolute;top:85px;overflow: hidden;border-radius: 5px;background-color: white;z-index: 2;box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.2);}
+    .nav-item{padding-left:20px;padding-right:50px;}
     .tex{font-size: 30px;top:25%;}
+    .me-auto{margin-top: 0;}
     .insta{padding-right: 10px;}
 }
