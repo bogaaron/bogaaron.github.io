@@ -45,8 +45,9 @@
 .nav-link{font-weight: bold; text-transform: uppercase;color: #323233;font-size: 12px;}
 .nav-link:hover{color: grey;}
 .nav-item{padding: 0 5px;}
-.bannerbutt{background-color: #329A06;color:white;font-weight: bold; text-transform: uppercase;margin-top:20px;padding: 10px 40px;display: block;border-radius: 6px;}
+.bannerbutt{background-color: #329A06;max-width: 300px;color:white;font-weight: bold; text-transform: uppercase;margin-top:20px;padding: 10px 40px;display: block;border-radius: 6px;}
 .btn:hover {background-color: #323233;}
+.bannerbutt:hover{color: white;}
 .tex{font-weight: bold;font-size: 30px;color: #323233;text-transform: uppercase;max-width: 80%;margin: 0 auto;padding: 0 20px;margin-top: 50px;}
 .also{font-size: 16px;display: block;}
 .force{color:#329A06;}
@@ -134,7 +135,7 @@ td:nth-child(3) {
 
 @media (max-width: 789px) {
 	.logo{width: 180px;}
-    .navbar{padding-top: 0;}
+    .navbar{padding-top: 0;height: 110px;}
     .icons{order:3;}
     .navbar-brand{order:2;}
     .container-fluid{width: 100%;}
@@ -211,6 +212,8 @@ td:nth-child(3) {
 
     .desctopp{display: none;}
     .phoned{display: block;}
+
+    .vegre{margin-left: 0px;}
 
     /* .navbar-toggler{order:1} */
     /* .icons{position: absolute;top:20px;right:15px;margin-right: 0;} */
