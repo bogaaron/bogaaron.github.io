@@ -94,6 +94,9 @@
 var pieChart = null; // Globális változó a diagramhoz, amelyet később hozunk létre vagy frissítünk
 
 function createPieChart() {
+
+
+
     // Ellenőrizzük, hogy van-e már meglévő diagram
     if (pieChart !== null) {
         // Ha van, töröljük azt
@@ -131,6 +134,18 @@ function createPieChart() {
 
 
     // console.log(weights);
+    const radios = document.getElementsByName('exampleRadios');
+
+    let fraction = 1;
+    for (let i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            // Ha a rádiógomb be van jelölve, állítsd be az értéket
+            fraction = radios[i].value;
+            break;
+        }
+    }
+
+    console.log(fraction,"aaaaaaaaaaaaaaaaaa");
     // console.log(symbols);
 
     // Csak a nem nulla súlyú szimbólumok kiválasztása
@@ -139,7 +154,7 @@ function createPieChart() {
     var nonZeroReturns = [];
     for (var i = 0; i < weights.length; i++) {
         if (weights[i] !== 0) {
-            nonZeroWeights.push(weights[i]);
+            nonZeroWeights.push(weights[i]*fraction);
             nonZeroSymbols.push(symbols[i]);
             nonZeroReturns.push(returns[i]);
         }
@@ -183,15 +198,15 @@ function createPieChart() {
 
     // Adott szöveg elkészítése
     var optimalAllocationText = "<div class='tit'> Optimális elosztás:</div> <br>";
-    for (var i = 0; i < weights.length; i++) {
-        if (weights[i] !== 0) {
-            optimalAllocationText += (weights[i] * 100).toFixed(2) + "% " + symbols[i] + "<br>";
+    for (var i = 0; i < nonZeroWeights.length; i++) {
+        if (nonZeroWeights[i] !== 0) {
+            optimalAllocationText += (nonZeroWeights[i] * 100).toFixed(2) + "% " + symbols[i] + "<br>";
         }
     }
     var optimalAllocationAmountText = "<div class='tit'>Optimális összeg:</div> <br>";
-    for (var i = 0; i < weights.length; i++) {
-        if (weights[i] !== 0) {
-            optimalAllocationAmountText += symbols[i] +"&nbsp;"+ (weights[i]*amount).toFixed(2) + "$"+"<br>";
+    for (var i = 0; i < nonZeroWeights.length; i++) {
+        if (nonZeroWeights[i] !== 0) {
+            optimalAllocationAmountText += symbols[i] +"&nbsp;"+ (nonZeroWeights[i]*amount).toFixed(2) + "$"+"<br>";
 
         }
     }
@@ -199,25 +214,28 @@ function createPieChart() {
     var optimalReturnAmountText = "<div class='altit'>Várható nyereség:</div> ";
 
     var totalreturn=0;
-    for (var i = 0; i < weights.length; i++) {
-        if (weights[i] !== 0) {
-            optimalReturnAmountText += symbols[i] +"&nbsp;"+((Math.abs(returns[i])*weights[i])*(amount)).toFixed(2)+"$"+"<br>";
-            totalreturn+=((Math.abs(returns[i])*weights[i])*(amount));
+    for (var i = 0; i < nonZeroWeights.length; i++) {
+        if (nonZeroWeights[i] !== 0) {
+            optimalReturnAmountText += symbols[i] +"&nbsp;"+((Math.abs(returns[i])*nonZeroWeights[i])*(amount)).toFixed(2)+"$"+"<br>";
+            totalreturn+=((Math.abs(returns[i])*nonZeroWeights[i])*(amount));
         }
     }
     console.log(totalreturn,"***************");
 
     var totalret=" <div class='altit'>Összes nyereség:</div> "+totalreturn.toFixed(2)+"$";
+    var cash="<div class='altit'>Cash:</div> "+((amount)-(amount*fraction))+"$";
 
     // Az optimalAllocation id-jú div-be írás
     document.getElementById("optimalallocation").innerHTML = optimalAllocationText;
     document.getElementById("optimalamount").innerHTML = optimalAllocationAmountText;
     document.getElementById("expected").innerHTML = optimalReturnAmountText;
     document.getElementById("total").innerHTML = totalret;
+    document.getElementById("cash").innerHTML = cash;
 }
 
 // Függvény a Pie Chart frissítéséhez
 function updatePieChart() {
+
     // Pie Chart újrarajzolása
     // Az input elemeket elmentjük változókba
 

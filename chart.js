@@ -30,7 +30,7 @@ for (const symbol in smoothedClosePrices["sp"]) {
         borderWidth: 1
     });
     datasets.push({
-        label: `${symbol} Forecast`,
+        label: `${symbol} Előrejelzés`,
         data: forecast,
         backgroundColor: 'rgba(54, 162, 235, 0.2)', // Háttérszín
         borderColor: 'rgba(54, 162, 235, 1)', // Szegélyszín

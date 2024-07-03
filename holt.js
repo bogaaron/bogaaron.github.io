@@ -256,7 +256,15 @@ function holtSmoothing(data){
         // Dropdown menü elem hozzáadása
         var dropdownItem = document.createElement("div");
         dropdownItem.classList.add("dropdown-item");
-        dropdownItem.innerHTML = "Determinációs együttható, R^2="+r2+"<br>Teljes hiba, SST="+step5+"<br>Regressziós hiba, SSR="+ssrcalctotal+"<br>Reziduális hiba, SSE="+ssecalctotal+"<br> SSR+SSE="+ssrcalctotal+ssecalctotal+"=SST="+step5+"<br>Standard hiba, SE="+se+"<br>Kis kiugró adatok="+ (data.length-numOfDifferenceskis)/data.length+"<br>Nagy kiugró adatok="+(data.length-numOfDifferencesnagy)/data.length+"<br>Homoeszkadaszticitás="+correlation+"<br>Előjelváltások száma:"+ numOfSignChanges;
+
+        let autokorrelation="Kielégítí a függetlenségi feltételt";
+        if(numOfSignChanges<30){
+            autokorrelation="Pozitív autokorreláció"
+        }else if(numOfSignChanges>70){
+            autokorrelation="Negetív autokorreláció"
+        }
+
+        dropdownItem.innerHTML = "Determinációs együttható, R^2="+r2+"<br>Teljes hiba, SST="+step5+"<br>Regressziós hiba, SSR="+ssrcalctotal+"<br>Reziduális hiba, SSE="+ssecalctotal+"<br> SSR+SSE="+ssrcalctotal+"+"+ssecalctotal+"=SST="+step5+"<br>Standard hiba, SE="+se+"<br>Kis kiugró adatok="+ (data.length-numOfDifferenceskis)/data.length+"<br>Nagy kiugró adatok="+(data.length-numOfDifferencesnagy)/data.length+"<br>Homoeszkadaszticitás="+correlation+"<br>Előjelváltások száma:"+ numOfSignChanges+"/100"+"("+autokorrelation+")";
 
         // console.log(dropdownItem.innerHTML);
         // Dropdown menü elem hozzáadása a menühöz

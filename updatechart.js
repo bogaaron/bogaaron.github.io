@@ -43,7 +43,6 @@ function renameDrop(){
 renameDrop();
 
 function toggleAlma() {
-    console.log("most");
     const almaDiv = document.getElementById('alma');
     // Megváltoztatjuk az "alma" div display tulajdonságát, hogy megjelenjen vagy eltűnjön
     if (almaDiv.style.display === 'none') {
@@ -98,21 +97,21 @@ const updateChart = () => {
     const visibleDatasets = Object.entries(smoothedClosePrices.sp)
         .filter(([symbol, data], index) => data.visible)
         .flatMap(([symbol, data], index) => {
-            const colorIndex = index % colors.length; 
+            const colorIndex = index % colors.length;
             return [
                 {
                     label: symbol,
                     data: data.data,
                     backgroundColor: colors[colorIndex],
-                    borderColor: colors[colorIndex].replace('0.2', '1'), 
+                    borderColor: colors[colorIndex].replace('0.2', '1'),
                     borderWidth: 1,
                     hidden: !data.visible
                 },
                 {
-                    label: symbol + ' Forecast',
+                    label: symbol + ' Előrejelzés',
                     data: data.forecast,
-                    backgroundColor: "rgba(0, 128, 0, 0.2)", 
-                    borderColor: "rgba(0, 128, 0, 0.4)", 
+                    backgroundColor: "rgba(0, 128, 0, 0.2)",
+                    borderColor: "rgba(0, 128, 0, 0.4)",
                     borderWidth: 1,
                     hidden: !data.visible
                 }
@@ -122,7 +121,7 @@ const updateChart = () => {
     myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: Array.from({ length: Math.max(...visibleDatasets.map(d => d.data.length)) }, (_, i) => `Day ${i + 1}`),
+            labels: Array.from({ length: Math.max(...visibleDatasets.map(d => d.data.length)) }, (_, i) => `Nap ${i + 1}`),
             datasets: visibleDatasets
         }
     });

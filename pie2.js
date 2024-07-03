@@ -79,7 +79,7 @@ function createPieChart2() {
         pieChart2.destroy();
     }
 
-    console.log(selectedSymbols);
+    console.log(selectedSymbols,"heeeeheheheheheheheh");
 
     // // Mentés gomb
     // document.getElementById('save-btn').addEventListener('click', function() {
@@ -100,9 +100,11 @@ function createPieChart2() {
         }
     });
 
-    console.log(prices2);
+    console.log(prices2,"emmi");
 
     let weights = kellyPortfolio(prices2, tax);
+
+    console.log(weights,"sulyoooook")
 
     let returns = [];
     for (let i = 0; i < prices2.length; i++) {

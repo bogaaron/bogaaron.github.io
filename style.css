@@ -20,6 +20,7 @@ body{margin: 0;padding: 0;background-color: #121212 !important;}
 
 #expected{color: #17A2B8;}
 #total{color: #17A2B8;font-size: 20px;font-weight: bold;}
+#cash{color: #17A2B8;font-size: 20px;font-weight: bold;}
 
 .parts{max-width:1220px;margin: 0 auto;padding: 20px;background-color: #2F2F2F;color: white !important;border-radius: 10px;margin-top: 10px;}
 
@@ -41,7 +42,7 @@ body{margin: 0;padding: 0;background-color: #121212 !important;}
 
 .modal-content{color:#2F2F2F;}
 
-.km{padding-bottom: 20px;display: none;}
+.km{padding-bottom: 20px;}
 
 .optionholder{background-color: #2D2453;padding: 20px 0 200px 0;}
 .inp{border-radius: 50px;padding: 20px 0;}
@@ -89,3 +90,15 @@ body{margin: 0;padding: 0;background-color: #121212 !important;}
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+@media all and (max-width: 789px) {
+  .flexer{flex-direction: column;}
+  .flexer > button{max-width: 250px !important;margin: 10px auto !important;}
+  .hibaelemzes{flex-direction: column;}
+  .hibaelemzes > .o{min-width: 100px;margin: 10px auto;}
+  .o > button{min-width: 100px;}
+  .parts{overflow-y: hidden;overflow-x: auto;margin-left: 10px;margin-right: 10px;}
+  .parts > button{max-width: 250px !important;margin: 10px auto !important;display: block;}
+  .dropdown-menu{max-width: 100vw;overflow-y: hidden;overflow-x: auto;}
+  .above{padding: 0px;}
+  #mychart{width: 600px !important;height: 400px !important;}
+}

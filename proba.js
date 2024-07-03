@@ -39,19 +39,33 @@ function calculateCovariance(data1, data2) {
 
   function kellyPortfolio(prices, riskFreeRate) {
     let returns = prices.map(stockPrices => expectedReturn(stockPrices));
+
+    console.log(returns,"kellyreturns")
+
     let covMatrix = covarianceMatrix(prices);
+
+    console.log(covMatrix,"kellymatrix")
     let invMatrix = inverseMatrix(covMatrix);
+
+    console.log(invMatrix,"kellyinvmatrix")
 
 
     if (invMatrix === null) {
       return null;
     }
 
-    let excessReturns = returns.map(r => r - riskFreeRate / 252);
+    let excessReturns = returns.map(r => r - (riskFreeRate / 252));
+
+    console.log(excessReturns,"kellyreturns");
+
     let rawWeights = math.multiply(invMatrix, excessReturns);
+    console.log(rawWeights,"kellyrawweights");
     rawWeights = rawWeights.map(weight => Math.max(weight, 0));
+    console.log(rawWeights,"kellyrawweights");
     let sumRawWeights = rawWeights.reduce((a, b) => a + b, 0);
     let weights = rawWeights.map(weight => weight / sumRawWeights);
+
+    console.log(weights,"kellyweights");
 
     return weights;
   }
